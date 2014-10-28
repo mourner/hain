@@ -51,13 +51,11 @@
             ctx.scale(2, 2);
         }
 
-        for (var i = 0; triangles && i < triangles.length; i++) {
-            drawPoly(triangles[i], 'rgba(255,0,0,0.5)', 'rgba(255,255,0,0.07)');
-        }
-
-        // for (i = 0; i < testPoints.length; i++) {
-        drawPoly(testPoints, 'black','rgba(255,255,0,0.07)');
+        // for (var i = 0; triangles && i < triangles.length; i++) {
+        //     drawPoly(triangles[i], 'rgba(255,0,0,0.5)', 'rgba(255,255,0,0.07)');
         // }
+
+        drawPoly(testPoints, 'black','rgba(255,255,0,0.07)');
 
         function drawPoint(p, color) {
             var x = (p[0] - minX) * ratio + 5,
@@ -70,6 +68,8 @@
             ctx.beginPath();
 
             ctx.strokeStyle = color;
+            ctx.lineWidth = 2;
+            ctx.lineJoin = 'round';
             if (fill) ctx.fillStyle = fill;
 
             for (var i = 0; i < points.length; i++) {

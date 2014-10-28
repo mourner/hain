@@ -236,10 +236,11 @@ function hain(points) {
             // see if new node is needed (join does not align vertically with a window node
             if (joinType & PEAK) {
                 // drawPoint([p.next.x, p.next.y], 'red');
-                drawPoly([[q.x, q.y], [p.next.x, p.next.y]], 'darkgreen');
+                drawPoly([[q.x, q.y], [p.next.x, p.next.y]], 'red');
+                // if (p.next.y < topOfWindow.y) topOfWindow = p.next;
             } else {
                 // drawPoint([p.x, p.y], 'blue');
-                drawPoly([[q.x, q.y], [p.x, p.y]], 'darkgreen');
+                drawPoly([[q.x, q.y], [p.x, p.y]], 'red');
             }
             // drawPoint([q.x, q.y], joinType & PEAK ? 'red' : 'blue');
             // }
@@ -389,7 +390,7 @@ function hain(points) {
 
 function triangulateMonotone(p) {
     // drawMono(p);
-    drawPoint([p.x, p.y], 'blue');
+    // drawPoint([p.x, p.y], 'blue');
     // drawPoint([p.next.x, p.next.y], 'red');
 }
 
